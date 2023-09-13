@@ -1,0 +1,15 @@
+using System;
+					
+public class Program
+{
+	public void Main()
+	{
+		Console.WriteLine("What Temperture is it? (C)");
+		int temp = Convert.ToInt16(Console.ReadLine());
+		if (temp > 30){
+			Console.WriteLine("Stay Hydrated! It's going to be hot today!");
+		} else {
+			Console.WriteLine("The Weather is going to be pleasent today!");	
+		}
+	}
+}
