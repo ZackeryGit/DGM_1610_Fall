@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector3(horizontal, 0.0f, vertical);
         moveDirection = (moveDirection / 100) * moveSpeed; // Set Speed
         
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             // Is couching
             moveDirection = moveDirection * crouchMult;
