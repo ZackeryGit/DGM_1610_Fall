@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6310104792123959499}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Lazer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topBounds: 10
-  bottomBounds: -5
+  bottomBounds: -8
 --- !u!1 &8985482956782768414
 GameObject:
   m_ObjectHideFlags: 0

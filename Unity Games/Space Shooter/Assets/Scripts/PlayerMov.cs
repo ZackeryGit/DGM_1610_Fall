@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMov : MonoBehaviour
 {
     public float speed;
+    public int inventory;
     public float xRange;
     private float horizontalInput;
     public Transform blaster;
@@ -37,8 +38,20 @@ public class PlayerMov : MonoBehaviour
 
         
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-    }
+        if (other.gameObject.CompareTag("Credit"))
+        {
+            inventory += 1;
+            Debug.Log("Credits: " + inventory);
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Lazer"))
+        {
+            Destroy(other.gameObject);
+        }
+        
+    }    
 }
