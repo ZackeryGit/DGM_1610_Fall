@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Credit
   - Lazer
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -29,7 +29,7 @@ public class PlayerMov : MonoBehaviour
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale != 0)
         {
             // Create Lazer Bolt at Blaster
             Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);

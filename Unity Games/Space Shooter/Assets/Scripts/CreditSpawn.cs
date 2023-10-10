@@ -9,28 +9,19 @@ public class CreditSpawn : MonoBehaviour
 
     public Transform creditSpawn;
     public GameObject credit;
-    public float rangex;
+    public float rangex; // How far left or right the credit can spawn
+    public float spawnDelay;
+    public float spawnInterval;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnCorutine(rangex));
+        InvokeRepeating("spawnCredit", spawnDelay, spawnInterval); // spawn credits in intervals
     }
 
-    // Update is called once per frame
-    void Update()
+    void spawnCredit() // Spawns a credit
     {
-
-    }
-
-    IEnumerator SpawnCorutine(float rangex)
-    {
-        WaitForSeconds waitTime = new WaitForSeconds(5);
-        while (true)
-        {
-            float rndx = Random.Range(-rangex, rangex);
-            Instantiate(credit, new Vector3(rndx, creditSpawn.transform.position.y, creditSpawn.transform.position.z), creditSpawn.transform.rotation);
-            yield return waitTime;
-        }
+        float rndx = Random.Range(-rangex, rangex); // Random left or right
+        Instantiate(credit, new Vector3(rndx, creditSpawn.transform.position.y, creditSpawn.transform.position.z), creditSpawn.transform.rotation); // spawn credit
     }
 }
