@@ -119,4 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottomBounds: -8
-  speed: 5
+  speed: 4
+  material1: {fileID: 2100000, guid: 34693d730aee4bf4689c14f97e9fb300, type: 2}
+  material2: {fileID: 2100000, guid: f22fbcd68cf9a764e8b5c75dc7ac2faa, type: 2}
+  currentMat: 1
+  flickerSpeed: 0.5
+  flickerDelay: 0.5

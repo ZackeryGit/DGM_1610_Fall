@@ -7,10 +7,16 @@ public class CreditMove : MonoBehaviour
 
     public float bottomBounds; 
     public float speed;
+    public Material material1;
+    public Material material2;
+    public int currentMat = 1;
+    public float flickerSpeed;
+    public float flickerDelay;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("creditFlicker", flickerDelay, flickerSpeed);
     }
 
     // Update is called once per frame
@@ -20,6 +26,19 @@ public class CreditMove : MonoBehaviour
         if (transform.position.z < bottomBounds) // Delete credit if uncollected and off screen
         {
             Destroy(gameObject);
+        }
+    }
+
+    void creditFlicker()
+    {
+        if (currentMat == 1)
+        {
+            gameObject.GetComponent<Renderer>().material = material2;
+            currentMat = 2;
+        } else if (currentMat == 2)
+        {
+            gameObject.GetComponent<Renderer>().material = material1;
+            currentMat = 1;
         }
     }
 }
