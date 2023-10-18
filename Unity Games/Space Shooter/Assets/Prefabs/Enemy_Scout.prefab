@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bottomBounds: -8
   speed: 3
+  gameManager: {fileID: 0}
 --- !u!54 &-8861771959581810073
 Rigidbody:
   m_ObjectHideFlags: 0

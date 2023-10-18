@@ -6,6 +6,7 @@ public class CollisionDetect : MonoBehaviour
 {
 
     public ScoreManager scoreManager; // Store reference to scoreManager
+    public GameObject explosionPrefab;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class CollisionDetect : MonoBehaviour
     {
         if (this.CompareTag("Lazer") && other.CompareTag("Enemy"))  // If object is a lazer, and hits an enemy
         {
+            Instantiate(explosionPrefab, other.transform.position, other.transform.rotation); // create a explosion audio, that deletes once its done playing (See Explosion Audio Script)
             scoreManager.IncreaseScore(10);
             Destroy(gameObject); // Destroy bullet
             Destroy(other.gameObject); // Destroy Enemy

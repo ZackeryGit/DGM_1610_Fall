@@ -6,7 +6,10 @@ public class GameManager : MonoBehaviour
 {
 
     public bool isGameOver;
+    public GameObject player;
     public GameObject gameOverText;
+    public PlayerMov playerMov;
+
 
     // Start is called before the first frame update
     private void Awake()
@@ -33,5 +36,6 @@ public class GameManager : MonoBehaviour
     {
         gameOverText.gameObject.SetActive(true);
         Time.timeScale = 0;
+        playerMov.gameEnded = true;
     }
 }

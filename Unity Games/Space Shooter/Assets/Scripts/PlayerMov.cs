@@ -10,8 +10,15 @@ public class PlayerMov : MonoBehaviour
     private float horizontalInput;
     public Transform blaster;
     public GameObject lazerBolt;
+    public bool alrertEnd; // Has end game alert played
+    public bool gameEnded; // turns true when game manager detects end
+    public AudioSource gameOverSound;
 
-
+    private void Awake()
+    {
+        alrertEnd = false; // Has end game alert played
+        gameEnded = false; // turns true when game manager detects end
+    }
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +40,14 @@ public class PlayerMov : MonoBehaviour
             // Create Lazer Bolt at Blaster
             Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);
 
+        }
+        if (gameEnded) // check if game has ended
+        {
+            if (alrertEnd == false) // check if game over audio played already
+            {
+                alrertEnd = true;
+                gameOverSound.Play();
+            }
         }
   
     }   
