@@ -9,6 +9,18 @@ public class PlayerData : ScriptableObject
     public float speed;
     public float ammo;
 
+    public void SetHealth (float num)
+    {
+        health = num;
+    }
+    public void SetSpeed(float num)
+    {
+        speed = num;
+    }
+    public void SetAmmo(float num)
+    {
+        ammo = num;
+    }
     public void UpdateHealth(float num)
     {
         health += num;
