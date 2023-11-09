@@ -20,15 +20,24 @@ public class DraggableBehavior : MonoBehaviour
 
         dragable = true;
         startDragEvent.Invoke();
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         yield return new WaitForFixedUpdate();
         while (dragable)
         {
             yield return new WaitForFixedUpdate();
+            if (spriteRenderer.enabled) { 
             position = cameraObj.ScreenToWorldPoint(Input.mousePosition) + offset;
             transform.position = position;
+            }   
         }
     }
     private void OnMouseUp()
+    {
+        dragable = false;
+        endDragEvent.Invoke();
+    }
+
+    public void forceMouseUp()
     {
         dragable = false;
         endDragEvent.Invoke();
