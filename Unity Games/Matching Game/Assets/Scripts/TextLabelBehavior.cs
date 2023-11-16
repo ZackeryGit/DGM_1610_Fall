@@ -20,11 +20,16 @@ public class TextLabelBehavior : MonoBehaviour
 
     public void UpdateLabel(FloatData score)
     {
-        label.text = score.name + " : " + score.value.ToString(CultureInfo.InvariantCulture);
+        label.text = score.value.ToString(CultureInfo.InvariantCulture);
     }
     public void UpdateLabel(IntData score)
     {
-        label.text = score.name + " : " + score.value.ToString(CultureInfo.InvariantCulture);
+        label.text = score.value.ToString(CultureInfo.InvariantCulture);
+
+    }
+    public void UpdateLabel(string score)
+    {
+        label.text = score.ToString(CultureInfo.InvariantCulture);
 
     }
 }
