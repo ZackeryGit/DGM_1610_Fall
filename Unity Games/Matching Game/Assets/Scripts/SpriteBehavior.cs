@@ -17,7 +17,6 @@ public class SpriteBehavior : MonoBehaviour
     }
     public void ChangeRendererColor(ColorIDDataList obj)
     {
-        obj.SetCurrentColorRandomoly();
         spriteRenderer.color = obj.currentColor.value;
     }
 }
