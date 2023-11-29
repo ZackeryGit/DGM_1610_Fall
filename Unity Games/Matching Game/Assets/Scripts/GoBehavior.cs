@@ -49,8 +49,8 @@ public class GoBehavior : MonoBehaviour
     {
         while (canRun)
         {
-            yield return wfsObj;
             repeatUntilFalseEvent.Invoke();
+            yield return wfsObj;
         }
     }
     

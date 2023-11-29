@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 7719933624269506699}
   - component: {fileID: -6513638177070447643}
   - component: {fileID: -989454309179885015}
+  - component: {fileID: 572460327600300305}
   m_Layer: 6
   m_Name: Dot
   m_TagString: Untagged
@@ -728,3 +729,31 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   colorIDDataListObj: {fileID: 11400000, guid: 2c4dd9e7a441d5e498072b165edfd57d, type: 2}
+--- !u!114 &572460327600300305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7952149026247202592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5db2ca5640b5e43a5ecf091b440319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: c6f47ae971b509a4aa3a3456e7c5e327, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2078132667742661293}
+        m_TargetAssemblyTypeName: DestroyBehavior, Assembly-CSharp
+        m_MethodName: destroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
